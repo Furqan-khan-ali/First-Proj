@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/apiListFragment">
+
+    <fragment
+        android:id="@+id/apiListFragment"
+        android:name="com.example.dec2021.Fragments.ApiListFragment"
+        android:label="fragment_api_list"
+        tools:layout="@layout/fragment_api_list" >
+        <action
+            android:id="@+id/action_apiListFragment_to_apiFormFragment"
+            app:destination="@id/apiFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/apiFormFragment"
+        android:name="com.example.dec2021.Fragments.ApiFormFragment"
+        android:label="fragment_api_form"
+        tools:layout="@layout/fragment_api_form" />
+    <fragment
+        android:id="@+id/chatRecyclerFragment"
+        android:name="com.example.dec2021.Fragments.ChatRecyclerFragment"
+        android:label="fragment_chat_recycler"
+        tools:layout="@layout/fragment_chat_recycler" >
+        <action
+            android:id="@+id/action_chatRecyclerFragment_to_itemClickFragment"
+            app:destination="@id/itemClickFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemClickFragment"
+        android:name="com.example.dec2021.Fragments.ItemClickFragment"
+        android:label="fragment_item_click"
+        tools:layout="@layout/fragment_item_click" />
+</navigation>
